@@ -1,0 +1,17 @@
+.character {
+    background:#02afc5;
+    box-shadow: 0 2px 4px rgba(53,201,221);
+}
+
+.character__img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.character__title {
+    text-align: center;
+    color: #a9f3fd;
+    font-weight: normal;
+}

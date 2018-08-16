@@ -1,6 +1,7 @@
 import React from 'react';
-import styles from './maincharacters.css';
 import axios from 'axios';
+import Character from '../Character';
+import styles from './maincharacters.css';
 import loading from '../../static/img/loading.gif';
 
 class MainCharacters extends React.Component {
@@ -36,10 +37,7 @@ class MainCharacters extends React.Component {
           {
             data ? (
               data.map(item => (
-                <div key={item.id} className={styles.mainCharacters__item}>
-                  <img src={item.image} alt={item.name} className={styles.mainCharacters__img} />
-                  <h3 className={styles.mainCharacters__title}>{item.name}</h3>
-                </div>
+                <Character {...item} />
               ))
             ) : (
                 <div className={styles.loading}>
