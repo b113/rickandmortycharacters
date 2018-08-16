@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Characters from './components/Characters';
+import App from './components/App';
+import './static/css/global.css'
 
 ReactDOM.render(
-  <Characters />,
+  <App />,
   document.getElementById('app'),
 );
