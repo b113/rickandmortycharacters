@@ -1,9 +1,9 @@
 import React from 'react';
-import MainCharacters from '../MainCharacters';
+import Search from '../Search';
 
 const App = () => (
     <div>
-        <MainCharacters />
+        <Search />
     </div>
 );
 
