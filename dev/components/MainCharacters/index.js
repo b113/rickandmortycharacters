@@ -10,7 +10,7 @@ class MainCharacters extends React.Component {
 
     this.state = {
       data: null,
-    }
+    };
   }
 
   componentWillMount() {
@@ -19,12 +19,12 @@ class MainCharacters extends React.Component {
 
   getData() {
     axios('https://rickandmortyapi.com/api/character/1,2,3,4,5')
-      .then(response => {
+      .then((response) => {
         this.setState({
-          data: response.data
-        })
+          data: response.data,
+        });
       })
-      .catch(console.error)
+      .catch(console.error);
   }
 
   render() {
@@ -39,12 +39,12 @@ class MainCharacters extends React.Component {
                 <Character {...item} key={item.id} />
               ))
             ) : (
-                <Loader />
-              )
+              <Loader />
+            )
           }
         </div>
       </div>
-    )
+    );
   }
 }
 

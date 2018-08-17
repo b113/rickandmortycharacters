@@ -15,12 +15,12 @@ module.exports = {
     devtool: NODE_ENV === 'development' && 'cheap-module-eval-source-map',
     module: {
         rules: [
-            // {
-            //     test: /\.js$/,
-            //     enforce: 'pre',
-            //     exclude: /node_modules/,
-            //     loader: 'eslint-loader'
-            // },
+            {
+                test: /\.js$/,
+                enforce: 'pre',
+                exclude: /node_modules/,
+                loader: 'eslint-loader'
+            },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
