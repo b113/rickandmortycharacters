@@ -22,7 +22,6 @@ class Search extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.clickHandler = this.clickHandler.bind(this);
-    // this.networkError = this.networkError.bind(this);
     this.showMore = this.showMore.bind(this);
     this.charactersList = this.charactersList.bind(this);
   }
@@ -35,6 +34,7 @@ class Search extends React.Component {
           data: response.data.results,
           nextPage: response.data.info.next,
           pages: response.data.info.pages,
+          amount: 5,
         });
       })
       .catch((error) => {
