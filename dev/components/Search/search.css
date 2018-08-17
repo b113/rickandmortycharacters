@@ -26,7 +26,7 @@
     border: 3px solid #02afc5;
     background-color: #02afc5;
     color: #a9f3fd;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
 }
 
 .search__results {
@@ -38,7 +38,13 @@
 .search__resultsInner {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.search__wrapper {
+    text-align: center;
 }
 
 .search__error {
@@ -47,6 +53,20 @@
     font-weight: bold;
 }
 
+.search__btnMore {
+    width: 220px;
+    height: 40px;
+    text-align: center;
+    border: 3px solid #97ce4c;
+    background-color: #97ce4c;
+    color: #44281d;
+    letter-spacing: 3px;
+    box-shadow: 0 2px 4px rgba(151,206,76);
+}
+
+.search__notification {
+    font-size: 20px;
+}
 
 @media only screen and (max-width: 600px) {
     .search__formInput {
@@ -56,5 +76,9 @@
     .search__btn {
         width: 35%;
         letter-spacing: 0px;
+    }
+
+    .search__resultsInner {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
